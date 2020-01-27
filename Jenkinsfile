@@ -5,7 +5,7 @@ pipeline {
 			steps {
                 withAWS(region:'us-west-2',credentials:'aws-static') {
                 sh 'echo "Uploading content with AWS credentials"'
-                    s3Upload(file:'index.html', bucket:'udacity-project-4-s3-bucket', path: './index.html')
+                    s3Upload(file:'index.html', bucket:'udacity-project-4-s3-bucket', path: 'index.html')
                     }
 			}
 		}
